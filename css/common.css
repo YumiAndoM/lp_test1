@@ -47,14 +47,35 @@ header nav ul li a {
   display: block;
   width: 80%;
   position: relative;
+  text-decoration: none;
+}
+
+/* header nav ul li a:hover {
+  background-color: #009966;
+  border-radius: 30px;
+  color: #fff;  text-shadow: 2px 2px 3px rgba(4, 128, 21, 0.5);
+} */
+
+
+header nav ul li a::after {
+  position: absolute;
+  content: "";
+  bottom: 7%;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: #009966;
+  transition: all 0.3s ease 0s;
 }
 
 header nav ul li a:hover {
-  /* background-color: #009966;
-  border-radius: 30px;
-  color: #fff; */
-  text-shadow: 2px 2px 3px rgba(4, 128, 21, 0.5);
+  curspr: pointer;
 }
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
 
 
 /* やりたかったけどできなかった
