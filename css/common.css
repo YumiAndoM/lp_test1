@@ -1,0 +1,322 @@
+@charset "UFT-8";
+
+
+body {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  word-break: break-all;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+
+
+/* ここからheader */
+header nav {
+  width: 100%;
+  position: fixed;
+  background-color: #ffffff;
+  z-index: 999;
+  top: 0;
+  box-shadow: 2px 2px 8px rgba(4, 128, 21, 0.5);
+}
+
+header nav ul {
+  display: table;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+header nav ul li {
+  display: table-cell;
+  text-align: center;
+  width: 20%;
+  height: 70px;
+  line-height: 80px;
+  font-size: 1.2em;
+}
+
+header nav ul li a {
+  display: block;
+  width: 80%;
+  position: relative;
+}
+
+header nav ul li a:hover {
+  /* background-color: #009966;
+  border-radius: 30px;
+  color: #fff; */
+  text-shadow: 2px 2px 3px rgba(4, 128, 21, 0.5);
+}
+
+
+/* やりたかったけどできなかった
+  header nav ul li a::afetr {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #000000;
+  bottom: -1px;
+  visibility: hidden;
+}
+
+header ul li a:hover::after {
+  visibility: visible;
+} */
+
+div.top {
+  background: url(../img/top.png);
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+  margin-top: 80px;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 4em;
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 85%; /* なんとか真ん中に寄せれたけど…ほかにいい方法あるんではないか… */
+  transform: translate(-50%, -50%);
+}
+
+h1 span.luby {
+  position: absolute;
+  top: 40%;
+  display: block;
+  font-size: 2rem;
+}
+
+h1 p {
+  text-indent: 3%;
+}
+
+h1 p span.h1_bigfont {
+  font-size: 3em;
+}
+
+
+main {
+  width: 100%;
+}
+
+main section {
+  padding-top: 120px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+section:nth-of-type(even) {/* 偶数セクションのBGカラー */
+  background-color: #ffffed;
+}
+/* ここからインフォメーション */
+
+h2 {
+  font-size: 3em;
+  padding-left: 0;
+  text-shadow: 2px 1px 3px rgba(4, 128, 21, 0.5);
+  border-bottom: solid 4px rgba(4, 128, 21, 0.5);
+  width: 30%;
+  margin-left: 5%;
+  margin-bottom: 3%;
+}
+
+section.information ul {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+
+section.information ul li {
+  line-height: 40px;
+  font-size: 1.3em;
+  padding-left: 3%;
+}
+
+
+/* ここからコンセプト */
+
+div.concept_img {
+  background: url(../img/concept.png);
+  width: 100%;
+  height: 75vh;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  z-index: 1;
+}
+
+div.concept_img h3 {
+  background: #ffffed;
+  position: absolute;
+  z-index: 2;
+  font-size: 2.5em;
+  text-align: center;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  height: 300px;
+  padding-top: 2%;
+  bottom: -25%;
+  width: 80%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+section.concept p {
+  margin-top: 3%;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+
+/* ここからProvide */
+
+
+div.provide_wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+div.provide_item {
+  display: table;
+  margin-top: 5%;
+}
+
+div.sub_item {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+div.provide_txt {
+  width: 50%;
+  padding-left: 3%;
+}
+
+section.provide h3 {
+  font-size: 2em;
+  top: 2%;
+  margin-bottom: 5%;
+}
+
+
+/* ここからメニュー */
+
+div.menu_wrapper {
+  display: flex;
+}
+
+div.menu_block {
+  display: block;
+  width: 35%;
+  padding: 2%;
+  background-color: #fff;
+  margin: 5% auto;
+  box-shadow: 2px 2px 8px rgba(4, 128, 21, 0.5);
+  border-radius: 5px;
+}
+
+div.menu_block h3 {
+  font-size: 2rem;
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+div.menu_item {
+  display: flex;
+  margin-bottom: 7%;
+}
+
+div.menu_item img {
+  border-radius: 50%;
+  width: 40%;
+}
+
+div.menu_item div.txt {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+div.menu_item div.txt p {
+  font-size: 1.5em;
+}
+
+div.menu_item div.txt p.price {
+  background-color: #6d3a33;
+  display: block;
+  width: 150px;
+  padding: 2% 1%;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 0;
+  position: absolute;
+  right: 0;
+  bottom: 2%;
+}
+
+
+section.access {
+  width: 100%;
+}
+
+div.map {
+  background: url(../img/map.png);
+  width: 100%;
+  height: 75vh;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  z-index: 1;
+}
+
+div.access {
+  width: 100%;
+}
+
+div.access h3 {/* Figmaにいれているテキストシャドーはなしにしました */
+  text-align: center;
+  font-size: 2em;
+  margin-top: 100px;
+}
+
+div.access p {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 3%;
+}
+
+
+/* ここからFooter */
+footer {
+  width: 100%;
+  height: 100px;
+  color: #fff;
+  background-color: #003333;
+  display: table;
+}
+
+footer p {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
